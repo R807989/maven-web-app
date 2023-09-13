@@ -37,6 +37,30 @@
     </dependency>
   </dependencies>
 
+
+<distributionManagement>
+	
+	    <repository>
+	      <id>nexus</id>
+	      <name>abdul-releases</name>
+	       
+             <url> http://44.201.144.131:8081/repository/abdul-releases/</url>
+	    </repository>
+	    
+	    <snapshotRepository>
+	      <id>nexus</id>
+	      <name>abdul-snapshot </name>
+	      <url>http://44.201.144.131:8081/repository/abdul-snaps/</url>
+	    </snapshotRepository>
+	    
+	</distributionManagement>
+
+
+
+
+
+
+	
   
   <build>
     <finalName>01-maven-web-app</finalName>
