@@ -24,7 +24,12 @@ sh "mvn sonar:sonar"
 }
 }
 }
+stage("upload artifacts"){
+steps{
 
+nexusArtifactUploader artifacts: [[artifactId: '01-maven-web-app', classifier: '', file: 'target/ 01-maven-web-app.war', type: 'war']], credentialsId: 'ntr', groupId: 'in.ashokit', nexusUrl: '54.204.184.148:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'snap', version: '3.0-SNAPSHO'
+}
+}
 
 }
 
