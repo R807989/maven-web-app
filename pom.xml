@@ -50,7 +50,7 @@
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>abdul-snapshot </name>
-	      <url>http://44.201.144.131:8081/repository/abdul-snaps/</url>
+	      <url>http://3.83.156.88:8081/repository/kumar-snap/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
