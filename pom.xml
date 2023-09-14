@@ -38,24 +38,6 @@
   </dependencies>
 
 
-<distributionManagement>
-	
-	    <repository>
-	      <id>nexus</id>
-	      <name>abdul-releases</name>
-	       
-             <url> http://44.201.144.131:8081/repository/abdul-releases/</url>
-	    </repository>
-	    
-	    <snapshotRepository>
-	      <id>nexus</id>
-	      <name>abdul-snapshot </name>
-	      <url>http://3.83.156.88:8081/repository/kumar-snap/</url>
-	    </snapshotRepository>
-	    
-	</distributionManagement>
-
-
 
 
 
