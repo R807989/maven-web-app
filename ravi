@@ -3,7 +3,7 @@ agent any
 
 stages {
 
-stage {
+stage("git int") {
 steps {
 
   git 'https://github.com/R807989/maven-web-app.git'
