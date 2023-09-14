@@ -25,7 +25,7 @@ sh "mvn sonar:sonar"
 }
 stage("upload artifacts") {
 steps{
-nexusArtifactUploader artifacts: [[artifactId: '01-maven-web-app', classifier: '', file: 'web-app/target/01-maven-web-app.war/', type: 'war']], credentialsId: 'tokyon', groupId: 'in.ashokit', nexusUrl: '3.83.156.88:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'kumar-snap', version: '3.0-SNAPSHOT'
+nexusArtifactUploader artifacts: [[artifactId: '01-maven-web-app', classifier: '', file: '/var/lib/jenkins/workspace/web-app/target/ 01-maven-web-app.war', type: 'war']], credentialsId: 'tokyon', groupId: 'in.ashokit', nexusUrl: '3.83.156.88:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'kumar-snap', version: '01-maven-web-app'
 }
 }
 }
