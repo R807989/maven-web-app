@@ -9,6 +9,7 @@ steps {
 
 git 'https://github.com/R807989/maven-web-app.git'
 }
+}
 
 stage("build"){
 steps{
