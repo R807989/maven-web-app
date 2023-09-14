@@ -5,14 +5,14 @@ PATH="/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven/bin:$PAT
 }
 stages {
 
-stage("git int") {
+stage("git init") {
 steps {
 
   git 'https://github.com/R807989/maven-web-app.git'
 }
   
 }
-stage("git int") {
+stage("build") {
 steps {
 
   sh "mvn clean install pacakge"
