@@ -24,13 +24,13 @@ sh "docker build -t ravikumardockerhub/maven-web-app ."
 
 }
 }
-stage("login"){
+stage("dlogin and push"){
 steps{
-script {
-sh withCredentials([string(credentialsId: 'dockerhub', variable: 'dhpswd')]) {
+
+withCredentials([string(credentialsId: 'dockerhub', variable: 'dhpswd')]) {
     // some block
 sh 'docker login -u ravikumardockerhub -p ${dhpswd}'
-}
+
 }
   }
 }
