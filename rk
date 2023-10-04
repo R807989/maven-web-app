@@ -26,6 +26,7 @@ sh "docker build -t ravikumardockerhub/maven-web-app ."
 }
 stage("login"){
 steps{
+script {
 sh withCredentials([string(credentialsId: 'dockerhub', variable: 'dhpswd')]) {
     // some block
 sh 'docker login -u ravikumardockerhub -p ${dhpswd}'
@@ -33,7 +34,7 @@ sh 'docker login -u ravikumardockerhub -p ${dhpswd}'
 }
   }
 }
-
+}
 
   
 
