@@ -14,6 +14,11 @@ stage("build the maven"){
 steps{
 sh "mvn clean install package"
 }
+
+stage("image "build")
+steps{
+sh "docker build -t ravikumardockerhub/maven-web-app"
+}
 }
 
   }
