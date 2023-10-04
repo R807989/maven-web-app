@@ -1,11 +1,21 @@
 pipeline {
 agent any
+tools {
+maven "maven-9
+}
   stages{
     stage("git intigration") {
       steps{
         git 'https://github.com/R807989/maven-web-app.git'
       }
     }
+
+stage("build the maven"){
+steps{
+sh "mvn clean install package"
+}
+}
+
   }
 
 
