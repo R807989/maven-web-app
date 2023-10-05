@@ -1,9 +1,9 @@
 pipeline {
 agent any
-
 tools {
 maven "maven-9"
 }
+
   stages{
     stage("git intigration") {
       steps{
@@ -16,17 +16,7 @@ steps{
 sh "mvn clean install package"
 }
 }
-stage("build image"){
-steps{
-
-
-sh "docker build -t ravikumardockerhub/maven-web-app ."
 
 }
 }
-
-
-}
-}
-  
 
