@@ -27,6 +27,7 @@ script{
 withCredentials([string(credentialsId: 'dockerhub', variable: 'hb')]) {
 
     // some block
+sh "docker tag maven-web-app ravikumardockerhub/maven-web-app"
 sh " docker push ravikumardockerhub/maven-web-app"
 }
 }
