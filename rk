@@ -21,6 +21,15 @@ steps {
 sh "docker build -t maven-web-app ."
 }
 }
+stage("login and push"){
+steps{
+script{
+withCredentials([string(credentialsId: 'dockerhub', variable: 'hb')]) {
+    // some block
+}
+}
+}
+}
 }
 }
 
