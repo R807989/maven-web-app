@@ -25,7 +25,9 @@ stage("login and push"){
 steps{
 script{
 withCredentials([string(credentialsId: 'dockerhub', variable: 'hb')]) {
+
     // some block
+sh " docker push ravikumardockerhub/maven-web-app"
 }
 }
 }
